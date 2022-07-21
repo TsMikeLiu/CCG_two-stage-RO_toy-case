@@ -7,8 +7,8 @@ Mπ = np.zeros((3))
 for i in range(3):
     for j in range(3):
         Mx[i][j] = min(D[j], z[i].x)
-        Mλ[i] = max(C[i][0], C[i][1], C[i][2])
-        Mπ[i] = max(C[0][i], C[1][i], C[2][i])
+    Mλ[i] = max(C[i][0], C[i][1], C[i][2])
+    Mπ[i] = max(C[0][i], C[1][i], C[2][i])
 # 子问题求解kkt
 x = SP.addVars(3, 3, lb=0, obj=np.array(C) * -1, vtype=GRB.CONTINUOUS, name='x')
 g = SP.addVars(3, lb=0, ub=1.0, name='g')
