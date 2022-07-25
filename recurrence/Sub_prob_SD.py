@@ -33,6 +33,7 @@ SDSP.setObjective(obj, GRB.MAXIMIZE)
 SDSP.optimize()
 UB = LB - eta.x + SDSP.objval
 print("Information:")
+print(UB)
 for i in range(3):
     print(z[i].x)
 
