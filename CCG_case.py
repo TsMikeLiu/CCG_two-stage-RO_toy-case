@@ -107,7 +107,9 @@ while np.abs(UB-LB)>1e-5 :
     SP.optimize()
     UB = LB - eta.x + SP.objval
     print(UB)
+############################# CCG END ###########################################
 
+# Some informations
 print("Iteration finished! We found the optimal solution!")
 print("Final Objective:{0}".format(LB))
 print(y[0],y[1],y[2])
